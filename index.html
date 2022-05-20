@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@200&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <title>Guessing Number</title>
+
+    <style>
+      * {
+        background-color: #262525;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Merriweather", serif;
+      }
+
+      .fcontainer {
+        height: 70px;
+        /* border: 2px solid white; */
+        padding-top: 6px;
+        padding-left: 8px;
+        cursor: pointer;
+      }
+      .fcontainer h1 {
+        /* border: 2px solid white; */
+        background-color: white;
+        height: 45px;
+        width: 35%;
+        text-align: center;
+        padding-top: 3px;
+      }
+      .container1 {
+        /* border: 2px solid white; */
+        color: white;
+        height: 30px;
+        width: 38%;
+        float: right;
+        margin-top: -50px;
+        font-size: 15px;
+        padding-top: 5px;
+      }
+
+      .scontainer {
+        height: 50px;
+        /* border: 2px solid white; */
+        text-align: center;
+        margin-top: 40px;
+        color: white;
+      }
+      .scontainer h1 {
+        font-size: 32px;
+      }
+
+      .tcontainer {
+        height: 50px;
+        /* border: 2px solid white; */
+        margin-top: 35px;
+      }
+      .tcontainer hr {
+        height: 8px;
+        margin-top: 15px;
+        border: 2px solid white;
+        background-color: white;
+      }
+      .box {
+        height: 48px;
+        width: 20%;
+        background-color: white;
+        margin-top: -7%;
+        margin-left: 40%;
+        font-size: 40px;
+        text-align: center;
+      }
+      .wrapper {
+        margin-top: 15%;
+      }
+
+      .icontainer {
+        /* border: 2px solid white; */
+        height: 180px;
+        margin-top: 15%;
+        padding-left: 15px;
+        padding-top: 5px;
+      }
+      .icontainer input {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 75px;
+        text-align: center;
+        border: 2px solid white;
+        font-size: 40px;
+        width: 40%;
+      }
+      .icontainer span {
+        color: white;
+        float: right;
+        margin-right: 30px;
+      }
+      .icontainer score {
+        margin-right: 20px;
+      }
+      .bttn {
+        height: 50px;
+        text-align: center;
+        /* border: 2px solid white; */
+        font-size: 30px;
+        width: 35%;
+        margin-top: 20px;
+        /* background-color: white; */
+      }
+      .bttn button {
+        background-color: white;
+        color: black;
+        height: 45px;
+        width: 85%;
+        font-size: 20px;
+        margin-left: 17px;
+      }
+      .score {
+        background-color: whitesmoke;
+        margin-right: 23%;
+      }
+      .hscore {
+        margin-top: -9%;
+        margin-right: 40px;
+      }
+      .footer {
+        height: 30px;
+        background-color: white;
+        margin-top: 60%;
+        color: black;
+        text-align: center;
+        padding-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <audio src="wrongsound.mp3" id="wrong"></audio>
+    <audio src="sucess.mp3" id="suc"></audio>
+    <div id="bdy">
+      <div class="fcontainer" id="first">
+        <h1 onclick="refresh()">Again!</h1>
+        <div class="container1" id="firstsone">
+          <h4 id="firstone">Between 1 and 20</h4>
+        </div>
+      </div>
+      <div class="wrapper" id="second">
+        <div class="scontainer" id="secondone">
+          <h1 id="secondsone">Guess My Number!</h1>
+        </div>
+
+        <div class="tcontainer" id="twoone">
+          <hr />
+          <div class="box" id="qm">?</div>
+        </div>
+      </div>
+
+      <div class="icontainer" id="third">
+        <input type="number" id="inpt" />
+
+        <span id="guess">Start guessing. . .</span>
+        <div class="score">
+          <span id="scr">Score : </span>
+        </div>
+
+        <div class="bttn" id="btns">
+          <button onclick="inputValue()">Check!</button>
+        </div>
+        <div class="hscore">
+          <span id="hs">HighScore :</span>
+        </div>
+      </div>
+      <div class="footer">Powered by : Shashank Pandey</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
